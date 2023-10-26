@@ -10,7 +10,7 @@ public class Departamento {
      * Atributos da classe
      */
     private String genero;
-    private List<Roupa> roupas;
+    private List<Produto> roupas;
     
     /*
      * Construtor
@@ -34,14 +34,14 @@ public class Departamento {
     /*
      * Método para obter as roupas do departamento
      */
-    public List<Roupa> getRoupas() {
+    public List<Produto> getRoupas() {
         return Collections.unmodifiableList(roupas);
     }
     
     /*
      * Método para adicionar roupas individualmente ao departamento
      */
-    void addRopas(Roupa roupa){
+    void addRopas(Produto roupa){
         this.roupas.add(roupa);
     }
     
@@ -49,7 +49,7 @@ public class Departamento {
      * Quando chamado, este método exibirá os detalhes dos itens do departamento
      */
     void exibirPreco(){
-        for (Roupa roupa : roupas) {
+        for (Produto roupa : roupas) {
             System.out.println();
             System.out.println("Produto: "+ roupa.getNomePeca());
             System.out.println("Cor: "+ roupa.getCor());

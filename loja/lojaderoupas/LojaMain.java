@@ -10,9 +10,9 @@ public class LojaMain {
         CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
 
         // Instanciando roupas que ficarão no departamento
-        Roupa camisa = new Roupa("M", "Amarelo", 50.9, "camisa");
-        Roupa camisaRegata = new Roupa("M", "Azul", 60.9, "camisa regata");
-        Roupa calca = new Roupa("44", "Azul", 123.9, "calça");
+        Produto camisa = new Produto("M", "Amarelo", 50.9, "camisa");
+        Produto camisaRegata = new Produto("M", "Azul", 60.9, "camisa regata");
+        Produto calca = new Produto("44", "Azul", 123.9, "calça");
 
         // adicionando roupas ao departamento
         roupasMasculinas.addRopas(calca);
@@ -28,7 +28,7 @@ public class LojaMain {
         // Exibindo os itens que estão no carrinho
         carrinhoDeCompras.exibirItensDoCarrinho();
 
-        
+
         System.out.println(carrinhoDeCompras.valorTotalDoCarrinho());
 
 

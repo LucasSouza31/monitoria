@@ -1,6 +1,6 @@
 package questao3.lojaderoupas;
 
-public class Roupa {
+public class Produto {
 
     /*
      * Atributos
@@ -16,7 +16,7 @@ public class Roupa {
      * do construtor
      */
        
-    public Roupa(String tamanho, String cor, double preco, String nomePeca) {
+    public Produto(String tamanho, String cor, double preco, String nomePeca) {
         this.tamanho = tamanho;
         this.cor = cor;
         this.preco = preco;

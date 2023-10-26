@@ -8,7 +8,7 @@ public class CarrinhoDeCompras {
      * Atributos
      */
     
-    private ArrayList<Roupa> roupas;
+    private ArrayList<Produto> roupas;
     private ArrayList<Integer> quantidades;
     private double valorTotal;
 
@@ -28,7 +28,7 @@ public class CarrinhoDeCompras {
     /*
      * Aqui será adicionado as roupas e quantidades individualmente
      */
-    void addRoupa(Roupa roupa, int quantidade){
+    void addRoupa(Produto roupa, int quantidade){
         this.roupas.add(roupa);
         this.quantidades.add(quantidade);
     }
@@ -40,7 +40,7 @@ public class CarrinhoDeCompras {
      */
     public double valorTotalDoCarrinho(){        
         for (int i = 0; i < roupas.size(); i++) {
-            Roupa roupa = roupas.get(i);
+            Produto roupa = roupas.get(i);
             int quantidade= quantidades.get(i);
             valorTotal = roupa.getPreco()* quantidade;
         }
@@ -49,7 +49,7 @@ public class CarrinhoDeCompras {
 
     void exibirItensDoCarrinho(){        
         for (int i = 0; i < roupas.size(); i++) {
-            Roupa roupa = roupas.get(i);
+            Produto roupa = roupas.get(i);
             int quantidade= quantidades.get(i);
             System.out.println("Produto: "+ roupa.getNomePeca());
             System.out.println("Quantidade:"+ quantidade );
