@@ -22,7 +22,7 @@ public class LojaMain {
         // Exibindo os preços de todas as roupas
         roupasMasculinas.exibirPreco();
 
-        // Adicionando um item ao carrinho
+        // Adicionando um item ao carrinho, juntamente com a quantidade
         carrinhoDeCompras.addRoupa(calca, 2);
         
         // Exibindo os itens que estão no carrinho
