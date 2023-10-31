@@ -1,5 +1,6 @@
-package Monitoria.biblioteca;
 
+
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class Biblioteca {
         this.autores = autores;
     }
     public List<Categoria> getCategorias() {
-        return categorias;
+        return Collections.unmodifiableList(categorias);
     }
     public void setCategorias(List<Categoria> categorias) {
         this.categorias = categorias;
