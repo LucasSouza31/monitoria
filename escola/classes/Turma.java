@@ -54,14 +54,7 @@ public class Turma {
 
     public void setProfessores(List<Professor> professores) {
         this.professores = professores;
-    }
-    
-
-    public void aulasMinistradasPorTurma(){
-
         
-
     }
-
-
+  
 }

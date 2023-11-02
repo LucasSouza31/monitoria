@@ -36,7 +36,7 @@ public class Biblioteca {
 
     public void pesquisarLivro(Autor autor) {
         for (Livro livro : livros) {
-            for (Autor livroAutor : livro.getAutor()) {
+            for (Autor livroAutor : livro.getAutores()) {
                 if (livroAutor.equals(autor)) {
                     System.out.println("Livro: " + livro.getNomeLivro());
                 }
@@ -47,13 +47,16 @@ public class Biblioteca {
 
     public void pesquisarCategoria(Categoria categoriaLivro){
         for (Livro livro : livros) {
-            for (Categoria categoria : livro.getCategoria() ) {
+            for (Categoria categoria : livro.getCategorias() ) {
                 if (categoria.equals(categoriaLivro)) {
                     System.out.println("Livros dessa categoria: "+livro.getNomeLivro());
                 }                
             }
         }
     }
+
+  
+    
     
     
 }

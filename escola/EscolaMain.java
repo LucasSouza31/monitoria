@@ -13,8 +13,8 @@ public class EscolaMain {
 
         /*
          * Vamos começar construindo uma escola.
-         * Aqui foi declarado uma variável do tipo Escola com o nome ifba. Foi, também,
-         * passado o nome, foi escolhido "IFBA"
+         * Aqui foi declarado uma variável do tipo Escola com o nome ifba. Como consta na classe Escola, quando esta for instanciada,
+         * deverá ser passado um nome, nesse caso "IFBA".
          */
 
         Escola ifba = new Escola("IFBA");
@@ -77,7 +77,7 @@ public class EscolaMain {
         ads.setAluno(a4);
 
         /*
-         * inserindo alunos na turma de português
+         * inserindo alunos na turma de rdc
          */
         rdc.setAluno(a1);
         rdc.setAluno(a2);
@@ -85,7 +85,7 @@ public class EscolaMain {
         rdc.setAluno(a4);
 
         /*
-         * Inserindo professores nas turmas
+         * Criando lista de professor para adicionar nas turmas
          */
 
         List<Professor> professores = new ArrayList<>();

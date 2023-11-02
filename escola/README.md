@@ -9,7 +9,6 @@ Desenvolva um programa para gerenciar informações de uma **escola**. Cada esco
 3. Como **turma tem vários alunos e professores**, vamos precisar de uma classe turma, nela vai precisar conter **Array** para alunos e professores;
 4. Outra observação é **"alunos podem pertencer a mais de uma turma"**, assim a classe **Turma** vai precisar ter um **Array** de alunos;
 5. Os **"professores ministram aulas em uma ou mais turmas"**, na classe turma vamos precisar ter um **Array** de professores;
-6. Implementar uma funcionalidade para buscar em **quais turmas o profssor leciona**;
+6. Implementar uma funcionalidade para buscar em **quais turmas o professor leciona**;
 7. Implementar uma funcionalidade para **saber quais alunos estão matriculados nas turmas**;
 8. A questão não pede para **identificar quais disciplinas foram lecionadas em cada turma**;
-

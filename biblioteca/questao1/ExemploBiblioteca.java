@@ -13,59 +13,99 @@ public class ExemploBiblioteca {
          */
 
 
+         /*
+          * Instanciando biblioteca
+          */
         Biblioteca biblioteca= new Biblioteca();
 
+        /*
+         * Instaciando os autores
+         */
         Autor autor1= new Autor("Augusto", "augusto@gmail.com");
         Autor autor2= new Autor("Silvio", "silvio@gmail.com");
         Autor autor3= new Autor("Joana", "joana@gmail.com");
         Autor autor4= new Autor("Silvia", "silvia@gmail.com");
 
-        Categoria categoria= new Categoria("Acadêmico", "livros de programação");
-        Categoria categoria2= new Categoria("Biografia", "livros sobre empreendedorismo");
-        Categoria categoria3= new Categoria("Autoajuda", "livros sobre carreira");
+        /*
+         * Instanciando as categorias
+         */
+        Categoria informatica= new Categoria("Informática", "livros de programação");
+        Categoria biografia= new Categoria("Biografia", "livros sobre biografia e empreendedorismo");
+        Categoria autoajuda= new Categoria("Autoajuda", "livros sobre carreira");
         
         
-        List<Categoria> categorias1= new ArrayList<>();
+        /*
+         * Criando um array, já que um livro pode ter mais de uma categoria
+         */
+        List<Categoria> categoriaMista= new ArrayList<>();
+
+        /*
+         * Instanciando outro array para armazenar todos os categorias
+         */
         List<Categoria> todasAsCategorias= new ArrayList<>();
         
-        categorias1.add(categoria);
-        categorias1.add(categoria3);
+        /*
+         * Aqui estamos armazenando quantas categorias um livro vai fazer parte
+         */
+        categoriaMista.add(informatica);
+        categoriaMista.add(autoajuda);
 
-        todasAsCategorias.add(categoria);
-        todasAsCategorias.add(categoria2);
-        todasAsCategorias.add(categoria3);
+        /*
+         * Guardando todas as categorias
+         */
+        todasAsCategorias.add(informatica);
+        todasAsCategorias.add(biografia);
+        todasAsCategorias.add(autoajuda);
 
 
+        /*
+         * Como um livro pode ter mais de um autor, aqui será instanciando um array para guardar autores
+         */
         List<Autor> autoresLogicaProgramacao = new ArrayList<>();
         List<Autor> autoresLogicaProgramacao2= new ArrayList<>();
         List<Autor> autoresLogicaProgramacao3= new ArrayList<>();
         List<Autor>todosOsAutores= new ArrayList<>();
         
+        /*
+         * Armazenando autores 
+         */
         autoresLogicaProgramacao.add(autor1);
         autoresLogicaProgramacao.add(autor2);
+
+        /*
+         * Armazenando autores 
+         */
 
         autoresLogicaProgramacao2.add(autor4);
         autoresLogicaProgramacao2.add(autor3);
 
+         /*
+         * Armazenando autores 
+         */
         autoresLogicaProgramacao3.add(autor2);
 
+        /*
+         * Guardando todos os autores
+         */
         todosOsAutores.add(autor1);
         todosOsAutores.add(autor2);
         todosOsAutores.add(autor3);
         todosOsAutores.add(autor4);
 
-        Livro logica= new Livro("Lógica de programação I");
-        logica.setAutor(autoresLogicaProgramacao);
-        logica.setCategoria(categorias1);
+        /*
+         * Instanciando livro e definindo autores
+         */
 
-        Livro logica2= new Livro("Lógica de programação II");
-        logica2.setAutor(autoresLogicaProgramacao2);
-        logica2.setCategoria(categorias1);
+        Livro logica= new Livro("Lógica de programação I",autoresLogicaProgramacao, categoriaMista);  
 
-        Livro logica3= new Livro("Lógica de Programação III");
-        logica3.setAutor(autoresLogicaProgramacao3);
-        logica3.setCategoria(categorias1);
+        Livro logica2= new Livro("Lógica de programação II",autoresLogicaProgramacao2,categoriaMista);
 
+        Livro logica3= new Livro("Lógica de Programação III",autoresLogicaProgramacao3,categoriaMista);
+
+
+        /*
+         * Como biblioteca recebe vários livros, este array vai guardar todos os livros
+         */
         List<Livro>livros= new ArrayList<>();
 
         livros.add(logica3);
@@ -76,9 +116,9 @@ public class ExemploBiblioteca {
         biblioteca.setAutores(todosOsAutores);
         biblioteca.setCategorias(todasAsCategorias);
 
-        //biblioteca.pesquisarLivro(autor2);
+        biblioteca.pesquisarLivro(autor2);
 
-        biblioteca.pesquisarCategoria(categoria2);
+        //biblioteca.pesquisarCategoria(informatica);
 
 
     }
