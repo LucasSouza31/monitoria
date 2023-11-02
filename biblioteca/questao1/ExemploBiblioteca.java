@@ -116,8 +116,14 @@ public class ExemploBiblioteca {
         biblioteca.setAutores(todosOsAutores);
         biblioteca.setCategorias(todasAsCategorias);
 
+        /*
+         * Pesquisar autor
+         */
         biblioteca.pesquisarLivro(autor2);
 
+        /*
+         * Pesquisar livro
+         */
         //biblioteca.pesquisarCategoria(informatica);
 
 
