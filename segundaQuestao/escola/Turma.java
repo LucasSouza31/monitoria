@@ -1,4 +1,6 @@
-package Monitoria.escola.classes;
+
+
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -39,8 +41,8 @@ public class Turma {
         return Collections.unmodifiableList(alunos);
     }
 
-    public void setAlunos(List<Aluno> alunos) {
-        this.alunos = alunos;
+    public void adicionarAluno(Aluno aluno) {
+        alunos.add(aluno);
     }
 
     public void setAluno(Aluno aluno) {
@@ -52,9 +54,8 @@ public class Turma {
         return Collections.unmodifiableList(professores);
     }
 
-    public void setProfessores(List<Professor> professores) {
-        this.professores = professores;
-        
+    public void adicionarProfessor(Professor professor) {
+        professores.add(professor);
     }
   
 }

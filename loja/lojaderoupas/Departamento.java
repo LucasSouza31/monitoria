@@ -1,4 +1,4 @@
-package questao3.lojaderoupas;
+package loja.lojaderoupas;
 
 import java.util.ArrayList;
 import java.util.Collections;

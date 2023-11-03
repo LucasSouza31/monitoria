@@ -1,4 +1,4 @@
-package questao3.lojaderoupas;
+package loja.lojaderoupas;
 
 public class LojaMain {
     public static void main(String[] args) {

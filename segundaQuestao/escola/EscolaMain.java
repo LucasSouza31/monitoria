@@ -1,12 +1,8 @@
-package Monitoria.escola;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Monitoria.escola.classes.Aluno;
-import Monitoria.escola.classes.Escola;
-import Monitoria.escola.classes.Professor;
-import Monitoria.escola.classes.Turma;
+
 
 public class EscolaMain {
     public static void main(String[] args) {
@@ -24,7 +20,6 @@ public class EscolaMain {
          */
         Turma ads = new Turma("ADS01");
         Turma rdc = new Turma("RDC01");
-        Turma pm = new Turma("PM01");
 
         /*
          * Com as turmas, vamos criar os alunos
@@ -40,69 +35,46 @@ public class EscolaMain {
          */
 
         Professor ronaldo = new Professor("Ronaldo", "000001");
-        Professor silvio = new Professor("Silvio", "000002");
         Professor alice = new Professor("Alice", "000003");
 
         /*
-         * Definindo as disciplinas ministradas pelos professores
+         * Adicionando alunos e professores nas turmas
          */
 
-        ronaldo.setDisciplinasMinistradas("Matemática");
-        ronaldo.setDisciplinasMinistradas("Física");
+         ads.adicionarAluno(a4);
+         ads.adicionarAluno(a3);
+         ads.adicionarAluno(a2);
+         ads.adicionarProfessor(alice);
 
-        silvio.setDisciplinasMinistradas("Português");
-        silvio.setDisciplinasMinistradas("Redação");
+        rdc.alunos.add(a1);
+        rdc.alunos.add(a2);
+        rdc.adicionarAluno(a4);
+        rdc.adicionarProfessor(ronaldo);
 
         /*
-         * Aqui será passado uma lista de disciplinas para demonstrar o uso do método
-         * sobrecarregado
+         * Adicionando as turmas à escola
          */
 
-        List<String> disciplinas = new ArrayList<>();
-        disciplinas.add("Inglês");
-        disciplinas.add("Espanhol");
-        disciplinas.add("Francês");
+         ifba.adicionarTurma(rdc);
+         ifba.adicionarTurma(ads);
 
-        /*
-         * Aqui está sendo passado uma lista de disciplinas
-         */
-        alice.setDisciplinasMinistradas(disciplinas);
+        // Alunos que estão na turma ads
+        for (Aluno aluno : ads.getAlunos()) {
+            System.out.println(aluno.getNomeDoAluno());
+        }
 
-        /*
-         * inserindo alunos na turma de ads
-         */
-        ads.setAluno(a1);
-        ads.setAluno(a2);
-        ads.setAluno(a3);
-        ads.setAluno(a4);
+        // Professores da turma ads
+        for (Professor professor : ads.getProfessores()) {
+            System.out.println(professor.getNomeProfessor());
+        }
 
-        /*
-         * inserindo alunos na turma de rdc
-         */
-        rdc.setAluno(a1);
-        rdc.setAluno(a2);
-        rdc.setAluno(a3);
-        rdc.setAluno(a4);
+        //turmas em que um professor específico leciona
+        for (Turma turma : ifba.getTurmas()) {
+            if (turma.getProfessores().contains(ronaldo)) {
+                System.out.println(turma.getNomeTurma());
+            }
+        }
 
-        /*
-         * Criando lista de professor para adicionar nas turmas
-         */
-
-        List<Professor> professores = new ArrayList<>();
-        professores.add(alice);
-        professores.add(ronaldo);
-
-        /*
-         * inserindo professores na turma de ads
-         */
-        ads.setProfessores(professores);
-
-        /*
-         * inserindo turma na escola
-         */
-
-        ifba.setTurma(ads);
-        
 
     }
 }

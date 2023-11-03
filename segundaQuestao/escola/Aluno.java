@@ -1,4 +1,4 @@
-package Monitoria.escola.classes;
+ 
 
 public class Aluno {
 
@@ -25,10 +25,6 @@ public class Aluno {
  
     public String getNumeroDeMatricula() {
         return numeroDeMatricula;
-    }
-
-    public void setNumeroDeMatricula(String numeroDeMatricula) {
-        this.numeroDeMatricula = numeroDeMatricula;
     }
       
 }

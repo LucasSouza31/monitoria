@@ -1,4 +1,5 @@
-package Monitoria.escola.classes;
+
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,7 +11,7 @@ public class Professor {
     */
     private String nomeProfessor;
     private String matriculaProfessor;
-    private String disciplina;
+   
 
     /*
     * O construtor, nessa configuração, quando a classe for instanciada, precisaremos passar o nome e a matrícula do professor.
@@ -33,10 +34,5 @@ public class Professor {
     public String getMatriculaProfessor() {
         return matriculaProfessor;
     }
- 
-    public String getDisciplina() {
-        return disciplina;
-    } 
-
-    
+     
 }
