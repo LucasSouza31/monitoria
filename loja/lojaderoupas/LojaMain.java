@@ -1,4 +1,5 @@
-package loja.lojaderoupas;
+
+
 
 public class LojaMain {
     public static void main(String[] args) {
@@ -15,9 +16,9 @@ public class LojaMain {
         Produto calca = new Produto("44", "Azul", 123.9, "calça");
 
         // adicionando roupas ao departamento
-        roupasMasculinas.addRopas(calca);
-        roupasMasculinas.addRopas(camisa);
-        roupasMasculinas.addRopas(camisaRegata);
+        roupasMasculinas.addRoupas(calca);
+        roupasMasculinas.addRoupas(camisa);
+        roupasMasculinas.addRoupas(camisaRegata);
 
         // Exibindo os preços de todas as roupas
         roupasMasculinas.exibirPreco();

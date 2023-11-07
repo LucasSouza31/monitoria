@@ -1,8 +1,9 @@
-package loja.lojaderoupas;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 public class Departamento {
 
@@ -11,6 +12,7 @@ public class Departamento {
      */
     private String genero;
     private List<Produto> roupas;
+    private CarrinhoDeCompras carrinho;
     
     /*
      * Construtor
@@ -41,8 +43,14 @@ public class Departamento {
     /*
      * Método para adicionar roupas individualmente ao departamento
      */
-    void addRopas(Produto roupa){
-        this.roupas.add(roupa);
+    void addRoupas(Produto roupa){
+
+        if (this.roupas.contains(roupa)) {
+            if (Objects.equals(roupa, this.genero)) {
+                System.out.println("ok");
+            }
+        }
+
     }
     
     /*
